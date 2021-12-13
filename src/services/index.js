@@ -11,6 +11,14 @@ const httpClient = axios.create({
   baseURL: API_ENVS.local
 })
 
+httpClient.interceptors.request.use(config => {
+  const token = window.localStorage.getItem('token')
+
+  if (token) {
+    config.headers.common.Authorization = `Bearer ${token}`
+  }
+}, (error))
+
 httpClient.interceptors.response.use((response) => response, (error) => {
   const canThrowAnError = error.request.status === 0 ||
   error.request.status === 500
