@@ -6,49 +6,49 @@
     }"
     class="opacity-75 content-loader"
   >
-    <span :style="{ animationDuration }" class="content-laoder--fx"/>
+    <span :style="{ animationDuration }" class="content-loader--fx"/>
     <slot />
   </div>
 </template>
 
 <script>
-import { computed } from '@vue/reactivity'
+import { computed } from 'vue'
+
 export default {
   props: {
     maxWidth: {
-      type: Number,
-      default: 100
+      default: 100,
+      type: Number
     },
     minWidth: {
-      type: Number,
-      default: 80
+      default: 80,
+      type: Number
     },
     animationDuration: {
       type: String,
       default: '1.6s'
     },
     height: {
-      type: String,
-      default: '1rem'
+      default: '1rem',
+      type: String
     },
     width: {
-      type: String,
-      default: '1rem'
-    },
-    setup (props) {
-      const computedWidth = computed(() => {
-        const value = Math.random() * (props.width - props.minWidth)
-        return props.width ?? `${Math.floor(value + props.minWidth)}%`
-      })
-
-      return { computedWidth }
+      default: '1rem',
+      type: String
     }
+  },
+  setup (props) {
+    const computedWidth = computed(() => {
+      const value = Math.random() * (props.width - props.minWidth)
+      return props.width ?? `${Math.floor(value + props.minWidth)}%`
+    })
+
+    return { computedWidth }
   }
 }
 </script>
 
 <style lang="postcss" scoped>
-
 @keyframes shimmer {
   100% {
     transform: translateX(100%);
@@ -61,7 +61,6 @@ export default {
   overflow: hidden;
   background: #f6f7f8;
 }
-
 .content-loader--fx {
   position: absolute;
   top: 0;
@@ -69,9 +68,9 @@ export default {
   bottom: 0;
   left: 0;
   transform: translateX(-100%);
-  background-image: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 32%);
+  background-image: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
   background-position: 0 0;
-  background-size: 1000 100%;
+  background-size: 1000 100;
   animation: shimmer infinite alternate ease-in-out;
 }
 </style>
