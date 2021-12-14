@@ -32,15 +32,15 @@ describe('AuthService', () => {
       return Promise.resolve({ data: user })
     })
 
-    const reponse = await AuthService(mockAxios).register(user)
-    expect(reponse.data).toHaveProperty('name')
-    expect(reponse.data).toHaveProperty('password')
-    expect(reponse.data).toHaveProperty('email')
-    expect(reponse).toMatchSnapshot()
+    const response = await AuthService(mockAxios).register(user)
+    expect(response.data).toHaveProperty('name')
+    expect(response.data).toHaveProperty('password')
+    expect(response.data).toHaveProperty('email')
+    expect(response).toMatchSnapshot()
   })
 
   it('should throw an error when not found', async () => {
-    const errors = { status: 404, statusText: 'Not Found'}
+    const errors = { status: 404, statusText: 'Not Found' }
 
     mockAxios.post.mockImplementationOnce(() => {
       return Promise.resolve({ request: errors })
