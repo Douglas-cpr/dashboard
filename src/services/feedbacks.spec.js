@@ -9,28 +9,28 @@ describe('FeedbacksService', () => {
   })
 
   it('shoud return all of feedbacks when pass null param', async () => {
-  const feedbacks = [
-    {
-      apiKey: 'fcd5015c-10d3-4e9c-b395-ec7ed8850165',
-      createdAt: 1608681600000,
-      device: 'Chrome 85.0, macOS 10.14',
-      fingerprint: '490135491',
-      id: 'eab759f8-f238-4ff9-ae91-ee1558982329',
-      page: 'https://feedbacker.com/pricing',
-      text: 'Podia ter um botão de solicitar demo 1',
-      type: 'IDEA'
-    },
-    {
-      apiKey: 'fcd5015c-10d3-4e9c-b395-ec7ed8850165',
-      createdAt: 1605225600000,
-      device: 'Chrome 85.0, macOS 10.14',
-      fingerprint: '490135491',
-      id: 'eab759f8-f238-4ff9-ae91-ee1558982329',
-      page: 'https://feedbacker.com/pricing',
-      text: 'Muito bom!',
-      type: 'OTHER'
-    }
-  ]
+    const feedbacks = [
+      {
+        apiKey: 'fcd5015c-10d3-4e9c-b395-ec7ed8850165',
+        createdAt: 1608681600000,
+        device: 'Chrome 85.0, macOS 10.14',
+        fingerprint: '490135491',
+        id: 'eab759f8-f238-4ff9-ae91-ee1558982329',
+        page: 'https://feedbacker.com/pricing',
+        text: 'Podia ter um botão de solicitar demo 1',
+        type: 'IDEA'
+      },
+      {
+        apiKey: 'fcd5015c-10d3-4e9c-b395-ec7ed8850165',
+        createdAt: 1605225600000,
+        device: 'Chrome 85.0, macOS 10.14',
+        fingerprint: '490135491',
+        id: 'eab759f8-f238-4ff9-ae91-ee1558982329',
+        page: 'https://feedbacker.com/pricing',
+        text: 'Muito bom!',
+        type: 'OTHER'
+      }
+    ]
 
     mockAxios.get.mockImplementationOnce(() => {
       return Promise.resolve({ data: feedbacks })
@@ -53,7 +53,6 @@ describe('FeedbacksService', () => {
   })
 
   it('should return all of feedbacks summary when pass null param ', async () => {
-
     const feedbacksSummmary = {
       all: 7,
       idea: 3,

@@ -54,7 +54,7 @@ describe('UserService', () => {
 
   it('should return an api key when pass null param', async () => {
     const apiKey = {
-      apiKey: 'fcd5015c-10d3-4e9c-b395-ec7ed8850165',
+      apiKey: 'fcd5015c-10d3-4e9c-b395-ec7ed8850165'
     }
 
     mockAxios.post.mockImplementationOnce(() => {
@@ -68,7 +68,7 @@ describe('UserService', () => {
 
   it('should return an api key when pass string param', async () => {
     const apiKey = {
-      apiKey: 'fcd5015c-10d3-4e9c-b395-ec7ed8850165',
+      apiKey: 'fcd5015c-10d3-4e9c-b395-ec7ed8850165'
     }
 
     mockAxios.post.mockImplementationOnce(() => {

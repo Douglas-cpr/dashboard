@@ -7,5 +7,5 @@ const state = reactive({
 export default state
 
 export function setGlobalLoading (status) {
-  state.isLoading = status
+  state.isLoading = !!status
 }
