@@ -78,7 +78,7 @@ export default {
     })
 
     try {
-      const { data } = await services.feedbacks.getSummary()
+      const { data } = await services.feedbacks.getSumary()
       state.filters = applyFiltersStructure(data)
     } catch (error) {
       state.hasError = !!error

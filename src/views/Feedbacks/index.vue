@@ -15,34 +15,33 @@
     <div class="w-4/5 max-w-6xl py-10 grid grid-cols-4 gap-2">
       <div>
         <h1 class="text-3xl font-black text-brand-darkgray">Listagem</h1>
+
+        <suspense>
+          <template #default>
+            <Filters
+              class="mt-8 animate__animated animate__fadeIn animate__faster"
+            />
+          </template>
+
+          <template #fallback> <Filters-loading class="mt-8" /> </template>
+        </suspense>
       </div>
 
-      <suspense>
-        <template #default>
-          <Filters />
-        </template>
-
-        <template #fallback>
-          loading...
-        </template>
-      </suspense>
-
-      <div class="px-10 pt-20 col-span-3">
-        feedbacks
-      </div>
+      <div class="px-10 pt-20 col-span-3"></div>
     </div>
   </div>
-
 </template>
 
 <script>
 import HeaderLogged from '@/components/HeaderLogged'
+import FiltersLoading from './FiltersLoading'
 import Filters from './Filters'
 
 export default {
   components: {
     HeaderLogged,
-    Filters
+    Filters,
+    FiltersLoading
   }
 }
 </script>
