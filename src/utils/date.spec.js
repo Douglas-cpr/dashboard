@@ -11,7 +11,7 @@ describe('Date utils', () => {
     expect(getDiffTimeBetweenCurrentDate(undefined)).toBe('')
   })
 
-  it('should return a date when pass a correct param', () => {
+  it('should return difference of days when pass a correct param', () => {
     expect(getDiffTimeBetweenCurrentDate('10-01-2021', new Date('12-01-2021'))).toBe('61 dias atrás')
   })
 })
