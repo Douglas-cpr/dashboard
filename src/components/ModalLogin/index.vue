@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between">
+  <div class="flex justify-between" id="modal-login">
     <h1 class="text-4xl font-black text-gray-800">Entre na sua conta</h1>
 
     <button
@@ -14,6 +14,7 @@
       <label for="" class="block">
         <span class="text-lg font-medium text-gray-800">E-mail</span>
         <input
+          id="email-field"
           v-model="email.value"
           type="email"
           :class="{
@@ -23,6 +24,7 @@
           placeholder="exemplo@gmail.com"
         />
         <span
+          id="email-error"
           v-if="!!email.errorMessage"
           class="block font-medium text-brand-danger"
         >
@@ -33,6 +35,7 @@
       <label for="" class="block mt-9">
         <span class="text-lg font-medium text-gray-800">Senha</span>
         <input
+          id="password-field"
           v-model="password.value"
           type="password"
           :class="{
@@ -42,6 +45,7 @@
           placeholder="***"
         />
         <span
+          id="password-error"
           v-if="!!password.errorMessage"
           class="block font-medium text-brand-danger"
         >
@@ -50,6 +54,7 @@
       </label>
 
       <button
+        id="submit-button"
         :disabled="isLoading"
         type="submit"
         :class="{

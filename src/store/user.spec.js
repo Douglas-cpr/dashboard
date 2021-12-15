@@ -7,7 +7,6 @@ import {
 } from './user'
 
 describe('UserStore', () => {
-
   afterEach(() => {
     resetUserStore()
   })

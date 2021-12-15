@@ -1,9 +1,7 @@
-import useStore from "../hooks/useStore"
-import { setGlobalLoading } from "./global"
-
+import useStore from '../hooks/useStore'
+import { setGlobalLoading } from './global'
 
 describe('GlobalStore', () => {
-
   it('should set global loading when pass a boolean param', () => {
     const store = useStore()
 
@@ -23,7 +21,6 @@ describe('GlobalStore', () => {
 
     setGlobalLoading(true)
     expect(store.Global.isLoading).toEqual(true)
-
 
     setGlobalLoading(false)
     expect(store.Global.isLoading).toEqual(false)

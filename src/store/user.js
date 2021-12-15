@@ -8,7 +8,7 @@ let state = reactive(userInitialState)
 
 export default state
 
-export function resetUserStore() {
+export function resetUserStore () {
   state = reactive(userInitialState)
 }
 

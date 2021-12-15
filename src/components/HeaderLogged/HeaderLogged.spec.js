@@ -39,7 +39,7 @@ describe('<HeaderLogged />', () => {
         plugins: [router]
       }
     })
-  
+
     const buttonLogout = wrapper.find('#logout-button')
     expect(buttonLogout.text()).toBe('...')
   })
@@ -55,7 +55,7 @@ describe('<HeaderLogged />', () => {
         plugins: [router]
       }
     })
-  
+
     const buttonLogout = wrapper.find('#logout-button')
     expect(buttonLogout.text()).toBe('Douglas (sair)')
   })
