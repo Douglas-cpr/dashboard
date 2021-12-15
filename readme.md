@@ -1,4 +1,4 @@
-## <a href="https://douglas-cpr-feedbacker-dashboard.netlify.app/">Acesse aqui</a>
+## <a href="https://douglas-cpr-feedbacker-dashboard.netlify.app/" target="_blank">Acesse aqui</a>
 
 ## 🚀 Tecnologias
 
