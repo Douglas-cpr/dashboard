@@ -9,7 +9,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./dashboard
+    working-directory: dashboard
 
 jobs:
   jest:
